@@ -31,6 +31,8 @@
             $resultado = "$resultado &nbsp;".$valorDado."&nbsp;";
             $jugador[] = $aleatorio;
         }
+
+        sort($jugador);
         return $resultado;
     }
 
