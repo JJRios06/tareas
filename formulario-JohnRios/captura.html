@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            font-family: 'Arial', sans-serif;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            background-color: #978CB0;
+            justify-content: center;
+        }
+
+        h1{
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="file"], input[type="number"], select {
+            width: 97%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+
+        .formulario{
+            background-color: #fff;
+            width: 40%;
+            padding: 2rem;
+            border-radius: 2%;
+        }
+
+        .botones {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        input[type="submit"], input[type="reset"]{
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="titulo">
+        <h1>Formulario de Jugador</h1>
+    </div>
+
+    <div class="formulario">
+        <form action="index.php" method="post" enctype="multipart/form-data">
+
+            <label>Nombre:</label><br>
+            <input type="text" name="Nombre" required><br>
+            <label>Alias:</label><br>
+            <input type="text" name="Alias" required><br>
+            <label>Edad:</label><br>
+            <input type="number" name="Edad" required><br>
+
+            <fieldset>
+                <legend>Armas a elegir (puedes elegir varias):</legend>
+                <input type="checkbox" name="Armas" id="Maza" value="Maza">
+                <label for="Maza">Maza</label><br>
+                <input type="checkbox" name="Armas" id="Antorcha" value="Antorcha">
+                <label for="Antorcha">Antorcha</label><br>
+                <input type="checkbox" name="Armas" id="Martillo" value="Martillo">
+                <label for="Martillo">Martillo</label><br>
+                <input type="checkbox" name="Armas" id="Latigo" value="Latigo">
+                <label for="Latigo">Látigo</label><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>¿Practica artes mágicas?</legend>
+                <input type="radio" name="ArtesMagicas" id="si" value="si" required>
+                <label for="si">Sí</label><br>
+                <input type="radio" name="ArtesMagicas" id="no" value="no" required>
+                <label for="no">No</label><br>
+            </fieldset>
+
+            <p>Subir imagen:</p>
+
+            <input type="hidden" name="MAX_FILE_SIZE" value="10000">
+            <input type="file" name="imagen" id="imagen" accept="image/png">
+            <br>
+
+            <div class="botones">
+                <input type="submit" name="Enviar" id="Enviar" value="Enviar">
+                <input type="reset" name="Borrar" id="Borrar" value="Borrar">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
